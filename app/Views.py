@@ -1,11 +1,14 @@
 from flask import render_template
 
-class Views()
-@app.route('/')
-def index():
+class Views:
+    @app.route('/')
 
-    '''
-    It returns the index page and its content
-    '''
-    render_template('index.html')
+    def index():
+
+        '''
+        It returns the index page and its content
+        '''
+        render_template('index.html')
+
+
 
