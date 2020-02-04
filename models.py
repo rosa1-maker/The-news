@@ -10,17 +10,17 @@ class News:
         self.poster = poster
 
 
-# class Review:
-#     all_reviews =[]        
-#     def __init__(self, news_id, title, imageurl,Review):
-#         self.news_id =news_id
-#         self.title = title
-#         self.imageurl = imageurl
-#         self.review =Review
+class Review:
+    all_reviews =[]        
+    def __init__(self, news_id, title, imageurl,Review):
+        self.news_id =news_id
+        self.title = title
+        self.imageurl = imageurl
+        self.review =Review
 
 
-#     def save_the _reviews(self)
-#         review.all_reviews.append(self) 
+    def save_the _reviews(self)
+        review.all_reviews.append(self) 
 
 
 
