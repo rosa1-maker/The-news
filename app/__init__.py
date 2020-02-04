@@ -3,7 +3,7 @@ from flask_bootstrap import Bootstrap
 from .config import config_options
 from flask import Blueprint
 main = Blueprint('main', __name__)
-import Views,errorhandler
+# from app.main import Views,errors
 
 
 bootstrap = Bootstrap()
