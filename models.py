@@ -24,12 +24,12 @@ class Review:
 
 
 
-#     @classmethod
-#      def clear_the _reviews(cls)    
-#         Review.all_reviews.clear()
+    @classmethod
+     def clear_the _reviews(cls)    
+        Review.all_reviews.clear()
 
 #     @classmethod
-#     def get_the _revies(cls,id):
+#     def get_the _reviews(cls,id):
 
 #         response =[] 
 
