@@ -1,10 +1,8 @@
 from flask import render_template
 
-class Views:
+class View():
     @app.route('/')
-
     def index():
-
         '''
         It returns the index page and its content
         '''

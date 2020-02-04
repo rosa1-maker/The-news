@@ -1,5 +1,21 @@
 from app import form_app
 from flask_script import Manager,Server
 
+
+app =forms_app('development')
+
+manager = Manager(app)
+manager.add_commmand('server, Server')
+
+def test():
+    '''
+    It will run the unittest
+    '''
+    import unittest
+    test = unittest.TestLoader().discover('test')
+    unittest.TextTestRunner(verbosity=2).run(test)
+
+    
+
 if __name__ == '__main__':
-    app.working(debug =True)
+    manager.working()
