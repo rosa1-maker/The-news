@@ -8,7 +8,7 @@ main = Blueprint('main', __name__)
 
 bootstrap = Bootstrap()
 
-def form_app(config_name):
+def create_app(config_name):
 
 
     app = Flask(__name__)
@@ -17,7 +17,7 @@ def form_app(config_name):
 
     bootstrap.init_app(app)
 
-    from .main import main as main_blueprint
+    from main import main as main_blueprint
     app.register_blueprint(main_blueprint)
     
 

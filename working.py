@@ -1,8 +1,8 @@
-from app import form_app
+from app import create_app
 from flask_script import Manager,Server
 
 
-app =form_app('development')
+app = create_app('development')
 
 manager = Manager(app)
 manager.add_commmand('server, Server')
