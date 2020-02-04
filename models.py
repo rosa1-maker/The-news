@@ -28,13 +28,13 @@ class Review:
      def clear_the _reviews(cls)    
         Review.all_reviews.clear()
 
-#     @classmethod
-#     def get_the _reviews(cls,id):
+    @classmethod
+    def get_the _reviews(cls,id):
 
-#         response =[] 
+        response =[] 
 
-#         for review in cls.all_reviews:
-#             if review.news_id == id:
-#                 response.append(review)
+        for review in cls.all_reviews:
+            if review.news_id == id:
+                response.append(review)
 
-#         return response        
+        return response        
