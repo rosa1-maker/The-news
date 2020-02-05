@@ -1,8 +1,7 @@
 from flask import render_template,request,redirect,url_for
-from .import main
-from ..request import get_news,get_news,search_news
-from .forms import ReviewForm
-from .models import Review
+from . import main
+from ..request import get_news,get_articles
+from ..models import Review
 
 @main.route('/')
 def index():
@@ -10,13 +9,17 @@ def index():
     It returns the index page and its content
 
 	'''
-	sources = get_sources('business')
-	sports_sources = get_sources('sports')
-	technology_sources = get_sources('technology')
-	entertainment_sources = get_sources('entertainment')
+	news =get_news('category', 'api_key')
+	print(news)
+
+	
+	business_news= get_news('business')
+	sports_news = get_news('sports')
+	technology_news = get_news('technology')
+	entertainment_news = get_news('entertainment')
 	title = "News Highlighter"
 
-	return render_template('index.html',title = title, sources = sources,sports_sources = sports_sources,technology_sources = technology_sources,entertainment_sources = entertainment_sources)
+	return render_template('index.html',title = title, business_news =business_news, sports_news = sports_news,technology_news = technology_news,entertainment_news = entertainment_news)
 
 
 @main.route('/sources/<id>')

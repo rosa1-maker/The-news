@@ -8,30 +8,30 @@ articles_url = None
 
 def configure_request(app):
     global api_key,base_url1
-    api_key = app.config['MOVIE_API_KEY']
-    basse_url = app.config['MOVIE_API_BASE_URL']
+    api_key = app.config['NEWS_API_KEY']
+    base_url = app.config['NEWS_API_BASE_URL']
     articles_url = app.config['ARTICLES_BASE_URL']
 
 
-def get_sources(category):
+def get_news(category,api_key):
 	'''
 	Function that gets the json response to our url request
 	'''
-	get_sources_url = base_url.format(category,api_key)
+	get_news_url = base_url.format(category,api_key)
 
-	with urllib.request.urlopen(get_sources_url) as url:
-		get_sources_data = url.read()
-		get_sources_response = json.loads(get_sources_data)
+	with urllib.request.urlopen(get_news_url) as url:
+		get_news_data = url.read()
+		get_news_response = json.loads(get_news_data)
 
-		sources_results = None
+		news_results = None
 
-		if get_sources_response['sources']:
-			sources_results_list = get_sources_response['sources']
-			sources_results = process_sources(sources_results_list)
+		if get_news_response['news']:
+			news_results_list = get_news_response['news']
+			news_results = process_(news_results_list)
 
-	return sources_result
+	return news_result
 
-def process_sources(sources_list):
+def process_news(news_list):
 	'''
 	Function that processes the news sources results and turns them into a list of objects
 	Args:
@@ -39,23 +39,23 @@ def process_sources(sources_list):
 	Returns:
 		sources_results: A list of sources objects
 	'''
-	sources_results = []
+	news_results = []
 
-	for source_item in sources_list:
-		id = source_item.get('id') 
-		name = source_item.get('name')
-		description = source_item.get('description')
-		url = source_item.get('url')
-		category = source_item.get('category')
-		language = source_item.get('language')
-		country = source_item.get('country')
-
-
-		sources_object = Sources(id,name,description,url,category,country,language)
-		sources_results.append(sources_object)
+	for news_item in news_list:
+		id = news_item.get('id') 
+		name = news_item.get('name')
+		description = news_item.get('description')
+		url = news_item.get('url')
+		category = news_item.get('category')
+		language = news_item.get('language')
+		country = news_item.get('country')
 
 
-	return sources_results
+		news_object = News(id,name,description,url,category,country,language)
+		news_results.append(news_object)
+
+
+	return news_results
 
 def get_articles(id):
 	'''
@@ -89,8 +89,6 @@ def process_articles(articles_list):
 		if image:
 			articles_result = Articles(id,author,title,description,url,image,date)
 			articles_object.append(articles_result)	
-		
-
 		
 
 		
