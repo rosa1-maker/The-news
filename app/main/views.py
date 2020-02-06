@@ -14,7 +14,7 @@ def index():
 	entertainment_news = get_news('entertainment')
 	title = "News Highlighter"
 
-	return render_template('index.html', news =news,sports_news = sports_sources,technology_news = technology_news,entertainment_news = entertainment_news)
+	return render_template('index.html', news=news,sports_news = sports_news,technology_news = technology_news,entertainment_news = entertainment_news)
 
 
 @main.route('/news/<id>')
@@ -25,4 +25,4 @@ def articles(id):
 	articles = get_articles(id)
 	title = f'News | {id}'
 
-	return render_template('articles.html',title= title,articles = articles)
+	return render_template('news-articles.html',title= title,articles = articles)
