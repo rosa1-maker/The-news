@@ -1,0 +1,25 @@
+import b
+h1{
+    color: blue;
+}
+nav{
+    background-color: gray;
+}
+ul li:hover{
+    color: greenyellow;
+}
+
+#urlToImage{
+    width: 250px;
+    height: 350px;
+}
+*{
+    background-color: rgb(32, 204, 32);
+}
+span{
+    color:greenyellow;
+}
+#top{
+    font-size: x-large;
+    font-family: 'Robot',serif;
+}
