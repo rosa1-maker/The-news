@@ -1,0 +1,9 @@
+h1{
+    color: blue;
+}
+nav{
+    background-color: gray;
+}
+nav:hover{
+    color: greenyellow;
+}

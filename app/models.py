@@ -3,26 +3,28 @@ class News:
     A news class to define the news  objective
     '''
 
-    def __init__(self, id, title, overview,poster,country,url,description,language):
+    def __init__(self, id,name,description,url,category,country,language):
         self.id =id
         self.title = title
-        self.overview =overview
-        self.poster = poster
-        self.country = country
-        self.url = url
+        self.name =name
         self.description = description
+        self.url = url
+        self.category = category
+        self.country = country
         self.language = language
 
 
-class Review:
+class Article:
     
-    def __init__(self, news_id, title, imageurl,Review,description,date):
-        self.news_id =news_id
+    def __init__(self, id,author,title,description,url,urlToImage,publishedAt):
+        self.id =id
+        self.author = author
         self.title = title
-        self.imageurl = imageurl
-        self.review =Review
         self.description = description
-        self.date = date
+        self.url = url
+        self.urlToImage = urlToImage
+        self.publishedAt = publishedAt
+        
 
 
 

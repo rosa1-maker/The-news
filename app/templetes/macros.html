@@ -1,24 +1,24 @@
  
-{% macro displaySourceList(source_list) %}
+{% macro displaySourceList(news_list) %}
 
-{% for source_row in source_list |batch(4)%}
-    <div class="row">
+<!-- {% for source_row in source_list |batch(4)%}
+    <div class="row"> -->
                     
-        {% for sources in source_row %}
+        {% for news in news_list %}
             <div class="col-md-3">
                
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a href="/sources/{{sources.id}}">
-                            {{ sources.name}}
+                        <a href="/news/{{news.id}}">
+                            {{ news.name}}
                         </a>
                     </div>
                     <div class="panel-body">
                         <p>
-                            {{ sources.description |truncate(100)}}
+                            {{ news.description |truncate(100)}}
 
                         </p>
-                        <a href="/sources/{{sources.id}}" class="btn btn-success btn-sm">Visit {{sources.name}}</a>
+                        <a href="/news/{{news.id}}" class="btn btn-success btn-sm">Visit {{news.name}}</a>
                     </div>
                     
     
@@ -26,7 +26,7 @@
             </div>
         {% endfor %}
             
-    </div>
-{% endfor %}
+    <!-- </div>
+{% endfor %} -->
 
 {% endmacro %}
