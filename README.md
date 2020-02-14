@@ -3,14 +3,6 @@
 
 <p>News  is a web appliction that displays a list of news sources from around the world. A user is able to click on a news source and view an abreviated version of the particular news article. Clicking on the news article will then redirect you to the news article's web page.</p>
 
-<p>With the application, a user will be able to:</p>
-<ol>
-<li>See various news sources and select the ones they prefer.</li>
-<li>See all news sources from the source they selected.</li>
-<li>See Image description and time the news article was created.</li>
-<li>Click on an article and read it fully from the news source</li>
-</ol>
-
 ## Behavior Driven Development
 Behaviour	Input	Output
 Display news sources	On page load	List of various news sources is displayed per category
@@ -21,8 +13,6 @@ Read an entire article	Click an article	Redirected to the news source's site to 
 
 ## Prerequisites
 <p>You need the following to start working on the project on your local computer:</p>
-
-<p>A computer running on either Windows, MacOS or Ubuntu operating system installed with the following:</p>
 -Python version 3.6
 -Flask
 -Pip
@@ -30,7 +20,7 @@ Read an entire article	Click an article	Redirected to the news source's site to 
 -A text  Editor
 
 ## Installations
-<ul>
+<0l>
 <li>Clone this repository to your local computer.</l>
 <li>Ensure you have python3.6 installed in your computer.</li>
 <li>From the terminal navigate to the cloned project folder.</li>
@@ -41,7 +31,8 @@ Read an entire article	Click an article	Redirected to the news source's site to 
  python3.6 manage.py server
 <li>Run chmod +x start.sh follwoed by ./start.sh while in the project folder to start the project.</li>
 <li>Once started, the project can be accessed on your localhost using the address: localhost:5000.</li>
-<li>Alternatively the application can be accessed by visiting https://ppolle-news-highlights.herokuapp.com</li>
+<li>Visit https://ppolle-news-highlights.herokuapp.com to view my site</li>
+ </ol>
 
 ## Technologies Used
 Python v3.6
