@@ -31,12 +31,12 @@ Read an entire article	Click an article	Redirected to the news source's site to 
  python3.6 manage.py server
 <li>Run chmod +x start.sh follwoed by ./start.sh while in the project folder to start the project.</li>
 <li>Once started, the project can be accessed on your localhost using the address: localhost:5000.</li>
-<li>Visit https://ppolle-news-highlights.herokuapp.com to view my site</li>
+<li>Visit https://news-teresa.herokuapp.com/ to view my site</li>
  </ol>
 
 ## Technologies Used
-Python v3.6
-Boostrap
+Python v3.6,
+Boostrap and
 Flask
 
 
