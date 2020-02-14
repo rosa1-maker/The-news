@@ -1,3 +1,4 @@
+## THE NEWS
 ## Description
 [![codebeat badge](https://codebeat.co/badges/a4071666-790b-4585-a28f-98021938220f)](https://codebeat.co/projects/github-com-rosa1-maker-the-news-dev)
 
@@ -20,7 +21,7 @@ Read an entire article	Click an article	Redirected to the news source's site to 
 -A text  Editor
 
 ## Installations
-<0l>
+<ol>
 <li>Clone this repository to your local computer.</l>
 <li>Ensure you have python3.6 installed in your computer.</li>
 <li>From the terminal navigate to the cloned project folder.</li>
